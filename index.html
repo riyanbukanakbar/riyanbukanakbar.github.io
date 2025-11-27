@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PT Desain Rumah</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Loading Spinner */
+    #loading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255,255,255,0.3);
+  border-top-color: #00f7ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Body Background */
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7') center/cover no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content span {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+    /* Section Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .img-hover {
+      transition: transform 0.4s ease;
+    }
+
+    .img-hover:hover {
+      transform: scale(1.05);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+      border-left: 4px solid #0066cc;
+    }
+
+    /* 🔥 TAMBAH BAGIAN INI UNTUK BIKIN TEKS CARD JADI PUTIH */
+    .card-text {
+      color: white !important;
+    }
+
+    .card p,
+    .card .card-text,
+    .card .text-muted {
+      color: #ffffff !important;
+    }
+
+</style>
+
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading">
+  <div class="spinner"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#"><img src="../logo11.jpg" alt="Profil" style="width: 40px; height: 40px; border-radius: 60%;">   PT Desain Rumah</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="beranda">
+  <div class="container text-center hero-content">
+    <h1 class="display-4 fw-bold">Membangun Rumah Impian Anda</h1>
+    <p class="lead">PT Desain Rumah – Solusi Profesional Untuk Arsitektur Modern</p>
+  </div>
+</header>
+
+<!-- Tentang -->
+<section id="tentang" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Tentang Kami</h2>
+    <p class="text-light">PT Desain Rumah adalah perusahaan arsitektur yang telah berpengalaman dalam merancang dan merealisasikan berbagai proyek perumahan, villa, dan bangunan komersial sejak 2010.</p>
+  </div>
+</section>
+
+<!-- Layanan -->
+<section id="layanan" class="py-5 bg-dark">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Layanan</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="glass-card">
+          <h5>Desain Arsitektur</h5>
+          <p>Desain fasad dan denah yang estetis, fungsional, dan sesuai kebutuhan klien.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="glass-card">
+          <h5>Desain Interior</h5>
+          <p>Penataan ruang dalam yang elegan dan nyaman untuk segala kebutuhan rumah modern.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="glass-card">
+          <h5>Pengawasan Proyek</h5>
+          <p>Pengawasan pembangunan agar sesuai desain, waktu, dan anggaran.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proyek -->
+<section id="proyek" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Proyek Kami</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card bg-transparent border-0 text-white">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="card-img-top img-hover" alt="Proyek 1">
+          <div class="card-body">
+            <h5>Villa Tropis – Bali</h5>
+            <p class="text-muted">Desain terbuka dengan unsur alami dan nuansa tropis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-transparent border-0 text-white">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" class="card-img-top img-hover" alt="Proyek 2">
+          <div class="card-body">
+            <h5>Rumah Minimalis – Jakarta</h5>
+            <p class="text-muted">Desain minimalis 2 lantai dengan pencahayaan maksimal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-transparent border-0 text-white">
+          <img src="https://ecotown.id/wp-content/uploads/2024/09/Desain-Rumah-Mewah-Eropa.webp" class="card-img-top img-hover" alt="Proyek 3">
+          <div class="card-body">
+            <h5>Cluster Modern – Surabaya</h5>
+            <p class="text-muted">Perumahan cluster dengan fasad modern dan elegan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak" style="background:#6c6a6a; padding: 60px 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Hubungi Kami</h2>
+      <p>Silakan hubungi PT Desain Rumah untuk konsultasi atau informasi lebih lanjut.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h5><strong>Alamat Kantor</strong></h5>
+        <p>Jl. Bagon No. 123, Jambiarum, Jember jawa timur<br>
+        (Dekat Warung nasi pecel)</p>
+
+        <h5><strong>Email</strong></h5>
+        <p>
+          📧 kontak@desainrumah.co.id<br>
+          📧 support@desainrumah.co.id
+        </p>
+
+        <h5><strong>Telepon / WhatsApp</strong></h5>
+        <p>
+          📞 +62 831-4620-6451<br>
+          📞 +62 811-9876-5432
+        </p>
+
+        <h5><strong>Jam Operasional</strong></h5>
+        <p>
+          🕒 Senin – Jumat: 08.00 – 17.00 WIB<br>
+          🕒 Sabtu: 09.00 – 14.00 WIB<br>
+          ❌ Minggu & Hari Libur: Tutup
+        </p>
+
+        <h5><strong>Media Sosial</strong></h5>
+        <p>
+          🌐 <a href="https://instagram.com/desainrumah.co.id" target="_blank">Instagram</a><br>
+          🌐 <a href="https://facebook.com/desainrumahcoid" target="_blank">Facebook</a><br>
+          🌐 <a href="https://linkedin.com/company/desainrumah" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" placeholder="Nama lengkap" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Alamat email" required>
+          </div>
+          <div class="mb-3">
+            <label for="pesan" class="form-label">Pesan</label>
+            <textarea class="form-control" id="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    document.getElementById("loading").style.display = "none";
+  });
+</script>
+</body>
+</html>
